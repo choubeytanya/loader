@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.loader{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,0.1);
+    left:0%;
+    top:0%;
+    position:fixed;
+} 
+
+.loader::before{
+    content: ""; 
+    width:30px;
+    display:block;
+    height:30px;
+    border-radius: 50%;
+    border: 5px dotted black;
+    position:fixed;
+    animation-name: load;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes load{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
